@@ -1,0 +1,266 @@
+/**
+ * Constellation Admin Styles
+ */
+
+/* Form field width constraint */
+.constellation-form-narrow {
+    max-width: 500px;
+}
+
+/* Logo selector spacing */
+.constellation-form-narrow .mosaic-media-selector {
+    margin-bottom: 24px;
+}
+
+.constellation-form-narrow .mosaic-input,
+.constellation-form-narrow .mosaic-select,
+.constellation-form-narrow .mosaic-textarea {
+    max-width: 100%;
+}
+
+/* Tabs styling */
+.mosaic-tabs-container .mosaic-tab-content {
+    padding: 20px;
+}
+
+/* Notes tab - full width textarea */
+.constellation-notes-tab {
+    width: 100%;
+}
+
+.constellation-notes-tab .mosaic-textarea {
+    width: 100%;
+    min-height: 300px;
+    resize: vertical;
+}
+
+/* Form actions */
+.constellation-form-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+/* Tags */
+.constellation-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.constellation-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* Tags selector in forms */
+.constellation-tags-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.constellation-tag-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.constellation-tag-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.constellation-tag-checkbox .constellation-tag {
+    transition: opacity 0.2s ease;
+}
+
+.constellation-tag-checkbox:hover .constellation-tag {
+    opacity: 0.8;
+}
+
+/* Add new tag */
+.constellation-add-tag {
+    margin-top: 24px;
+    max-width: 300px;
+}
+
+.constellation-add-tag-input {
+    margin-bottom: 4px;
+}
+
+/* Color picker */
+.constellation-color-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.constellation-color-option {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.constellation-color-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.constellation-color-option span {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.constellation-color-option input[type="radio"]:checked + span {
+    border-color: #1e3a5f;
+    transform: scale(1.1);
+}
+
+.constellation-color-option:hover span {
+    transform: scale(1.1);
+}
+
+/* Sidebar details alignment */
+.constellation-sidebar-details {
+    margin-top: 40px;
+}
+
+/* Meta list for sidebar */
+.constellation-meta-list {
+    margin: 0;
+}
+
+.constellation-meta-list dt {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 2px;
+}
+
+.constellation-meta-list dd {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+}
+
+.constellation-meta-list dd:last-child {
+    margin-bottom: 0;
+}
+
+.constellation-meta-list code {
+    font-size: 11px;
+    background: #f3f4f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Toolbar (search + actions) */
+.constellation-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.constellation-toolbar > form {
+    flex: 1;
+}
+
+.constellation-toolbar > .mosaic-btn {
+    margin-left: auto;
+}
+
+/* Search box */
+.mosaic-search-box {
+    display: flex;
+    gap: 8px;
+    max-width: 400px;
+}
+
+.mosaic-search-box .mosaic-input {
+    flex: 1;
+}
+
+/* Grid helpers */
+.mosaic-grid {
+    display: grid;
+}
+
+.mosaic-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mosaic-col-span-2 {
+    grid-column: span 2 / span 2;
+}
+
+.mosaic-gap-4 {
+    gap: 1rem;
+}
+
+/* Form actions spread */
+.mosaic-form-actions-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Spacing helpers */
+.mosaic-mb-4 {
+    margin-bottom: 1rem;
+}
+
+/* Text helpers */
+.mosaic-text-muted {
+    color: #9ca3af;
+}
+
+/* Links without underline in tables */
+.mosaic-table a {
+    text-decoration: none;
+}
+
+.mosaic-table a:hover {
+    text-decoration: underline;
+}
+
+/* Center client count column */
+.mosaic-table th[data-column="client_count"],
+.mosaic-table td[data-label="Clients"] {
+    text-align: center !important;
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* Stat card clickable */
+.mosaic-stat-card-clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mosaic-stat-card-clickable:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .mosaic-grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .mosaic-col-span-2 {
+        grid-column: span 1;
+    }
+}
